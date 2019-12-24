@@ -29,12 +29,12 @@ CREATE TABLE `computer` (
   `description` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `min_price` int(6) NOT NULL,
   `max_price` int(6) NOT NULL,
-  `processor manufacturer` int(11) NOT NULL,
+  `processor_manufacturer` int(11) NOT NULL,
   `video_adapter_manufacturer` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `computer_processor_manufacturer_id_fk` (`processor manufacturer`),
+  KEY `computer_processor_manufacturer_id_fk` (`processor_manufacturer`),
   KEY `computer_video_adapter_manufacturer_id_fk` (`video_adapter_manufacturer`),
-  CONSTRAINT `computer_processor_manufacturer_id_fk` FOREIGN KEY (`processor manufacturer`) REFERENCES `processor_manufacturer` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `computer_processor_manufacturer_id_fk` FOREIGN KEY (`processor_manufacturer`) REFERENCES `processor_manufacturer` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `computer_video_adapter_manufacturer_id_fk` FOREIGN KEY (`video_adapter_manufacturer`) REFERENCES `video_adapter_manufacturer` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;

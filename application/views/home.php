@@ -19,7 +19,7 @@
 
 <div class="container">
 	<div class="row">
-		<form action="/" method="get" class="form">
+		<form action="<?php echo base_url(); ?>" method="get" class="form">
 			<div class="form-group">
 				<?php foreach ($targets as $item): ?>
 					<div class="form-check">
@@ -58,7 +58,7 @@
 				<?php endforeach; ?>
 			</div>
 
-			<a href="/" class="btn">Сбросить фильтры</a>
+			<a href="<?php echo base_url(); ?>" class="btn">Сбросить фильтры</a>
 			<input type="submit" class="btn btn-primary" value="Отправить">
 		</form>
 	</div>
